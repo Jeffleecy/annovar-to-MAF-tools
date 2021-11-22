@@ -34,7 +34,7 @@ for sample in sample_list:
         result = judge(data[var])
         if result == 1:
             output_data = df.iloc[var, 0:10]
-            output_data['sample_id'] = sample
+            output_data['Tumor_Sample_Barcode'] = sample
             output = output.append(output_data)
 
 output.to_csv(args.o, sep='\t', header=True, index=False)
